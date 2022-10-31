@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  backend:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    container_name: pratclot.com.backend
+    ports:
+      - "1337:1337"
+    env_file:
+      - .env.backend
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  frontend:
+    depends_on:
+      - backend
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+      network: host
+    container_name: pratclot.com.frontend
+    ports:
+      - "8000:80"

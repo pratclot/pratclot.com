@@ -1,0 +1,52 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch frontend",
+      "skipFiles": ["<node_internals>/**"],
+      "runtimeExecutable": "yarn",
+      "args": ["develop:frontend"],
+      "outputCapture": "std",
+      "envFile": "${workspaceFolder}/frontend/.env"
+    },
+    {
+      "type": "node",
+      "runtimeVersion": "18",
+      "request": "launch",
+      "name": "Launch backend",
+      "skipFiles": ["<node_internals>/**"],
+      "runtimeExecutable": "yarn",
+      "args": ["develop:backend"],
+      "outputCapture": "std",
+      "envFile": "${workspaceFolder}/.env.backend"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Build frontend",
+      "skipFiles": ["<node_internals>/**"],
+      "runtimeExecutable": "yarn",
+      "args": ["build"],
+      "outputCapture": "std",
+      "envFile": "${workspaceFolder}/frontend/.env",
+      "cwd": "${workspaceFolder}/frontend"
+    },
+    {
+      "type": "node",
+      "runtimeVersion": "18",
+      "request": "launch",
+      "name": "Build backend",
+      "skipFiles": ["<node_internals>/**"],
+      "runtimeExecutable": "yarn",
+      "args": ["build"],
+      "outputCapture": "std",
+      "envFile": "${workspaceFolder}/.env.backend",
+      "cwd": "${workspaceFolder}/backend"
+    }
+  ]
+}

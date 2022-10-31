@@ -10,13 +10,14 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "env-cmd -f .env gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "env-cmd": "^10.1.0",
     "gatsby": "^4.6.1",
     "gatsby-plugin-gatsby-cloud": "^4.7.0",
     "gatsby-plugin-image": "^2.6.0",
