@@ -9,7 +9,7 @@ services:
     ports:
       - "1337:1337"
     env_file:
-      - .env.backend
+      - backend/.env
     extra_hosts:
       - "host.docker.internal:host-gateway"
 

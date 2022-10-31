@@ -9,6 +9,4 @@ nvm use 18
 yarn ci:frontend
 ```
 
-`.env.frontend`.
-
 There are also run configurations for vscode provided. For convenience, it uses the same env files as docker-compose.

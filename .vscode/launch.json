@@ -23,7 +23,7 @@
       "runtimeExecutable": "yarn",
       "args": ["develop:backend"],
       "outputCapture": "std",
-      "envFile": "${workspaceFolder}/.env.backend"
+      "envFile": "${workspaceFolder}/backend/.env"
     },
     {
       "type": "node",
@@ -45,7 +45,7 @@
       "runtimeExecutable": "yarn",
       "args": ["build"],
       "outputCapture": "std",
-      "envFile": "${workspaceFolder}/.env.backend",
+      "envFile": "${workspaceFolder}/backend/.env",
       "cwd": "${workspaceFolder}/backend"
     }
   ]
