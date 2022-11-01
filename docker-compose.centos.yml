@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  gatsby:
+    image: pratclot.com.frontend:latest
+    container_name: pratclot.com.frontend
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:30080:80"
+    entrypoint:
+      - "/static-web-server"

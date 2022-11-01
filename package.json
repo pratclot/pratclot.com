@@ -10,7 +10,8 @@
     "clean:frontend": "rm -rf frontend/public",
     "ci:frontend": "yarn clean:frontend && yarn build:frontend",
     "docker:frontend": "docker build --network host -t pratclot.com.frontend:latest frontend/",
-    "run:frontend": "docker run -it pratclot.com.frontend:latest",
+    "run:frontend": "docker-compose --profile deploy up -d",
+    "run:centos": "docker-compose -f docker-compose.centos.yml up -d",
     "pack": "docker export pratclot.com.frontend -o pratclot.com.frontend.tar",
     "unpack": "docker import pratclot.com.frontend.tar pratclot.com.frontend:latest"
   },
