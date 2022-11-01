@@ -9,11 +9,10 @@
     "build:frontend": "env-cmd -f frontend/.env yarn --cwd frontend build",
     "clean:frontend": "rm -rf frontend/public",
     "ci:frontend": "yarn clean:frontend && yarn build:frontend",
-    "docker:frontend": "docker build --network host -t pratclot.com.frontend:latest frontend/",
+    "docker:frontend": "docker build -f frontend/Dockerfile.sws --network host --no-cache -t pratclot.com.frontend:latest frontend/",
+    "deps:frontend": "docker build --network host --target deps -t pratclot.com.frontend.deps:latest frontend/",
     "run:frontend": "docker-compose --profile deploy up -d",
-    "run:centos": "docker-compose -f docker-compose.centos.yml up -d",
-    "pack": "docker export pratclot.com.frontend -o pratclot.com.frontend.tar",
-    "unpack": "docker import pratclot.com.frontend.tar pratclot.com.frontend:latest"
+    "run:centos": "docker-compose -f docker-compose.centos.yml up -d"
   },
   "devDependencies": {
     "cross-env": "7.0.3",

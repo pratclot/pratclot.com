@@ -1,0 +1,9 @@
+FROM pratclot.com.frontend.deps:latest as app
+
+ADD --chown=node . .
+
+RUN yarn build
+
+FROM joseluisq/static-web-server
+
+COPY --from=app /home/node/app/public ./public

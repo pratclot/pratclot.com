@@ -11,6 +11,7 @@
       "skipFiles": ["<node_internals>/**"],
       "runtimeExecutable": "yarn",
       "args": ["develop:frontend"],
+      "console": "integratedTerminal",
       "outputCapture": "std",
       "envFile": "${workspaceFolder}/frontend/.env"
     },
