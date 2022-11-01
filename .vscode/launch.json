@@ -20,8 +20,10 @@
       "request": "launch",
       "name": "Launch backend",
       "skipFiles": ["<node_internals>/**"],
+      "sourceMaps": true,
       "runtimeExecutable": "yarn",
       "args": ["develop:backend"],
+      "console": "integratedTerminal",
       "outputCapture": "std",
       "envFile": "${workspaceFolder}/backend/.env"
     },

@@ -12,6 +12,8 @@ services:
       - backend/.env
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    profiles:
+      - "build"
 
   frontend:
     depends_on:
@@ -20,6 +22,18 @@ services:
       context: frontend
       dockerfile: Dockerfile
       network: host
+    image: pratclot.com.frontend
     container_name: pratclot.com.frontend
     ports:
       - "8000:80"
+    profiles:
+      - "build"
+
+  gatsby:
+    image: pratclot.com.frontend:latest
+    container_name: pratclot.com.frontend
+    restart: unless-stopped
+    ports:
+      - "30080:80"
+    profiles:
+      - "deploy"

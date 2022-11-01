@@ -8,7 +8,7 @@ WORKDIR /home/node/app
 
 ADD --chown=node package*.json yarn.lock ./
 
-RUN npm install
+RUN yarn install
 
 FROM deps as app
 

@@ -3,12 +3,15 @@
     "@strapi/plugin-graphql": "^4.0.5",
     "@strapi/plugin-i18n": "4.4.5",
     "@strapi/plugin-users-permissions": "4.4.5",
+    "@strapi/provider-upload-aws-s3": "^4.4.5",
     "@strapi/strapi": "4.4.5",
     "env-cmd": "^10.1.0",
     "fs-extra": "^10.0.0",
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "strapi-plugin-mysql-files": "^1.0.1",
+    "strapi-provider-upload-mysql": "^1.0.3"
   },
   "name": "backend",
   "private": true,

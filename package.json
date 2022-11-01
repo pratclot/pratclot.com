@@ -8,7 +8,11 @@
     "develop": "cross-env FORCE_COLOR=1 npm-run-all -l -p develop:*",
     "build:frontend": "env-cmd -f frontend/.env yarn --cwd frontend build",
     "clean:frontend": "rm -rf frontend/public",
-    "ci:frontend": "yarn clean:frontend && yarn build:frontend"
+    "ci:frontend": "yarn clean:frontend && yarn build:frontend",
+    "docker:frontend": "docker build --network host -t pratclot.com.frontend:latest frontend/",
+    "run:frontend": "docker run -it pratclot.com.frontend:latest",
+    "pack": "docker export pratclot.com.frontend -o pratclot.com.frontend.tar",
+    "unpack": "docker import pratclot.com.frontend.tar pratclot.com.frontend:latest"
   },
   "devDependencies": {
     "cross-env": "7.0.3",
