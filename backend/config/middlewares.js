@@ -12,21 +12,20 @@ module.exports = ({ env }) => [
             "data:",
             "blob:",
             "dl.airtable.com",
-            env("AWS_BUCKET" || "none"), // change here
+            `https://${env('AWS_BUCKET')}.s3.${env('AWS_REGION')}.amazonaws.com`, // change here
           ],
           "media-src": [
             "'self'",
             "data:",
             "blob:",
             "dl.airtable.com",
-            env("AWS_BUCKET" || "none"), // change here
+            `${env('AWS_BUCKET')}.s3.${env('AWS_REGION')}.amazonaws.com`, // change here
           ],
           upgradeInsecureRequests: null,
         },
       },
     },
   },
-  "strapi::security",
   "strapi::cors",
   "strapi::poweredBy",
   "strapi::logger",

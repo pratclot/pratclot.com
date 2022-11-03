@@ -6,6 +6,7 @@
   "configurations": [
     {
       "type": "node",
+      "runtimeVersion": "18",
       "request": "launch",
       "name": "Launch frontend",
       "skipFiles": ["<node_internals>/**"],

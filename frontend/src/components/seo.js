@@ -65,7 +65,9 @@ const Seo = ({ seo = {} }) => {
       )
     }
     if (fullSeo.shareImage) {
-      const imageUrl = fullSeo.shareImage.localFile.url
+      // This is a bug, when you use S3, there is no such thing as localFile
+      // const imageUrl = fullSeo.shareImage.localFile.url
+      const imageUrl = fullSeo.shareImage.url
       tags.push(
         {
           name: "image",
@@ -100,7 +102,8 @@ const Seo = ({ seo = {} }) => {
       link={[
         {
           rel: "icon",
-          href: favicon.localFile.url,
+          // href: favicon.localFile.url,
+          href: favicon.url,
         },
       ]}
       meta={metaTags}
