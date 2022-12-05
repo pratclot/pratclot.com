@@ -3,6 +3,13 @@ require("dotenv").config({
 })
 
 module.exports = {
+  siteMetadata: {
+    title: `Using Gatsby Head`,
+    description: `Pratclot.com`,
+    // twitterUsername: `@gatsbyjs`,
+    image: `/favicon.png`,
+    siteUrl: `https://pratclot.com`,
+  },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-postcss",
@@ -61,5 +68,6 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-transformer-remark",
+    "gatsby-plugin-sitemap",
   ],
 }

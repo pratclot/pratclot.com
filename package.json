@@ -20,6 +20,7 @@
     "wait-on": "5.2.1"
   },
   "dependencies": {
-    "env-cmd": "^10.1.0"
+    "env-cmd": "^10.1.0",
+    "strapi-plugin-sitemap": "^2.0.8"
   }
 }
